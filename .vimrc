@@ -71,8 +71,17 @@ syntax on
 colorscheme onehalfdark
 let g:lightline = { 'colorscheme': 'onehalfdark' }
 
+" gui (gvim)
+set guioptions-=m  " no menu bar
+set guioptions-=T  " no toolbar
+
 " nerdtree
 let g:NERDTreeMinimalUI=1
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" ocaml
+let g:opamshare=substitute(system('opam var share'), '\n$', '', '''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+autocmd filetype ocaml nnoremap <Leader>t :MerlinTypeOf<CR>
