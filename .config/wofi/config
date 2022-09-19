@@ -1,0 +1,4 @@
+mode=drun,run
+run-always_parse_args=true
+term=alacritty
+allow_images=true
