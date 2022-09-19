@@ -61,7 +61,7 @@ window#waybar.chromium {
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: #eb4d4b;
     border-bottom: 3px solid #ffffff;
 }
 
@@ -78,7 +78,7 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd {
+#custom-pacupdates {
     padding: 0 10px;
     color: #ffffff;
     border-radius: 3px;
@@ -215,43 +215,12 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd {
+#custom-pacupdates.uptodate{
     background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
     color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
 }
 
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+#custom-pacupdates.pending {
+    background-color: #eb4d4b;
+    color: #ffffff;
 }
