@@ -71,6 +71,13 @@ input type:keyboard {
     xkb_variant "azerty"
 }
 
+input type:touchpad {
+    dwt enabled
+    tap disabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
 ### Key bindings
 #
 # Basics:
