@@ -8,11 +8,8 @@ fi
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
-# Use local configuration if exists
-if [[ -e $HOME/.zshrc.local ]]; then
-  source $HOME/.zshrc.local
-fi
 
+export EDITOR=vim
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export PATH="$PATH":"$HOME"/.cargo/bin
