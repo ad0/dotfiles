@@ -2,15 +2,15 @@
 
 updates="$(checkupdates)"
 if [[ $? == 0 ]]; then
-    num_updates="$(echo "$updates" | wc -l)"
+    text="$(echo "$updates" | wc -l)"
     class="pending"
-    percentage=0
+    percentage=100
+    tooltip=$(echo "$updates" | sed -z 's/\n/\\n/g')
 else
     num_updates=""
     class="uptodate"
     percentage=0
+    tooltip="Up-to-date  "
 fi
 
-tooltip=$(echo "$updates" | sed -z 's/\n/\\n/g')
-
-echo '{"text": "'$num_updates'", "tooltip": "'${tooltip::-2}'", "class": "'$class'", "percentage":'$percentage'}'
+echo '{"text": "'$text'", "tooltip": "'${tooltip::-2}'", "class": "'$class'", "percentage":'$percentage'}'
