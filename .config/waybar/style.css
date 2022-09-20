@@ -132,6 +132,19 @@ window#waybar.chromium {
     animation-direction: alternate;
 }
 
+label#window {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 10px;
+    color: #ffffff;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
 label:focus {
     background-color: #000000;
 }
