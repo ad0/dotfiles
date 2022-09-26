@@ -1,0 +1,5 @@
+image=~/Images/wallpaper-lock.png
+scaling=fill
+show-keyboard-layout
+font="NotoSansMono Nerd Font"
+indicator-y-position=160
