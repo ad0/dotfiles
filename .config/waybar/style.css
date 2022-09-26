@@ -78,7 +78,8 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
-#custom-pacupdates {
+#custom-pacupdates,
+#language {
     padding: 0 10px;
     color: #ffffff;
     border-radius: 3px;
@@ -235,5 +236,10 @@ label:focus {
 
 #custom-pacupdates.pending {
     background-color: #eb4d4b;
+    color: #ffffff;
+}
+
+#language {
+    background-color: #00b093;
     color: #ffffff;
 }
