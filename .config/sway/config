@@ -69,6 +69,7 @@ exec swayidle -w \
 
 input type:keyboard {
     xkb_layout "fr,us"
+    xkb_variant "azerty,intl"
 }
 
 input type:touchpad {
