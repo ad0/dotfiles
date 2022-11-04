@@ -68,8 +68,8 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
-    xkb_layout "fr,us"
-    xkb_variant "azerty,altgr-intl"
+    xkb_layout "us,fr"
+    xkb_variant "altgr-intl,azerty"
 }
 
 input type:touchpad {
@@ -99,8 +99,8 @@ input type:touchpad {
     bindsym $mod+t exec $fbrowser
 
     # Language (keyboard layout)
-    bindsym $mod+Shift+f exec swaymsg input "type:keyboard" xkb_switch_layout 0
-    bindsym $mod+Shift+g exec swaymsg input "type:keyboard" xkb_switch_layout 1
+    bindsym $mod+Shift+f exec swaymsg input "type:keyboard" xkb_switch_layout 1
+    bindsym $mod+Shift+g exec swaymsg input "type:keyboard" xkb_switch_layout 0
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
