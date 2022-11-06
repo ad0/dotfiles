@@ -5,5 +5,7 @@ export PATH="$PATH":"$HOME"/.cargo/bin
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME'
 
+alias nv=nvim
+
 # opam configuration
 [[ ! -r /home/ad/.opam/opam-init/init.zsh ]] || source /home/ad/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
