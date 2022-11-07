@@ -63,6 +63,18 @@ return require('packer').startup(function(use)
   }
   require('neo-tree').setup()
 
+  -- fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+  local telescope_builtin = require('telescope.builtin')
+  vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
+  vim.keymap.set('n', '<leader>fp', telescope_builtin.git_files, {})
+  vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
+  vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
+
   -- end of config, bootstraping packer
   if packer_bootsrap then
     require('packer').sync()
