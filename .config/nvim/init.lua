@@ -99,7 +99,8 @@ return require('packer').startup(function(use)
   })
 
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  require('lspconfig')['sumneko_lua'].setup {
+  local lspconfig = require('lspconfig')
+  lspconfig['sumneko_lua'].setup {
     capabilities = capabilities,
     settings = {
       Lua = {
@@ -118,6 +119,7 @@ return require('packer').startup(function(use)
       },
     },
   }
+  lspconfig['ocamllsp'].setup {}
 
   -- end of config, bootstraping packer
   if packer_bootstrap then
