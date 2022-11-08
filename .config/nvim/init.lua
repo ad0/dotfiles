@@ -75,8 +75,52 @@ return require('packer').startup(function(use)
   vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
   vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 
+  -- LSP and completion
+  use 'neovim/nvim-lspconfig'   -- collection of common configurations for builtin LSP client
+  use 'hrsh7th/nvim-cmp'        -- completion framework
+  use 'hrsh7th/cmp-nvim-lsp'    -- LSP completion source
+  use 'hrsh7th/cmp-path'        -- paths completion source
+  use 'hrsh7th/cmp-vsnip'       -- snippet completion source
+  use 'hrsh7th/vim-vsnip'       -- snippet framework
+
+  local cmp = require('cmp')
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body)
+      end,
+    },
+    mapping = cmp.mapping.preset,
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' },
+      { name = 'path' },
+    }),
+  })
+
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  require('lspconfig')['sumneko_lua'].setup {
+    capabilities = capabilities,
+    settings = {
+      Lua = {
+        runtime = {
+          version = 'LuaJIT',
+        },
+        diagnostics = {
+          globals = { 'vim' },
+        },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file("", true),
+        },
+        telemetry = {
+          enable = false,
+        },
+      },
+    },
+  }
+
   -- end of config, bootstraping packer
-  if packer_bootsrap then
+  if packer_bootstrap then
     require('packer').sync()
   end
 end)
