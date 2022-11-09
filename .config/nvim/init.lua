@@ -119,6 +119,10 @@ return require('packer').startup(function(use)
       },
     },
   }
+  lspconfig['rust_analyzer'].setup {}
+  lspconfig['volar'].setup {
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+  }
   lspconfig['ocamllsp'].setup {}
 
   -- end of config, bootstraping packer
