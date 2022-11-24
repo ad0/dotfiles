@@ -7,5 +7,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME'
 
 alias nv=nvim
 
+alias gst='git status'
+alias glt='git log --oneline --decorate --graph --all'
+
 # opam configuration
 [[ ! -r /home/ad/.opam/opam-init/init.zsh ]] || source /home/ad/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
