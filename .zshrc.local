@@ -1,6 +1,7 @@
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export PATH="$PATH":"$HOME"/bin
 export PATH="$PATH":"$HOME"/.cargo/bin
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME'
