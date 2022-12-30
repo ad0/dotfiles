@@ -1,7 +1,7 @@
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export PATH="$PATH":"$HOME"/bin
+export PATH="$PATH":"$HOME"/bin:"$HOME"/.local/bin
 export PATH="$PATH":"$HOME"/.cargo/bin
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME'
@@ -10,6 +10,8 @@ alias nv=nvim
 
 alias gst='git status'
 alias glt='git log --oneline --decorate --graph --all'
+
+export GHCUP_USE_XDG_DIRS=1
 
 # opam configuration
 [[ ! -r /home/ad/.opam/opam-init/init.zsh ]] || source /home/ad/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
