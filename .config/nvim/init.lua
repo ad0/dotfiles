@@ -130,3 +130,4 @@ lspconfig['volar'].setup {
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
 }
 lspconfig['ocamllsp'].setup {}
+lspconfig['hls'].setup {}
