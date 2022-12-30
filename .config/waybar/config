@@ -32,7 +32,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
-        "format": "{icon} {count}",
+        "format": "{count} {icon}",
         "show-empty": false,
         "format-icons": ["", ""],
         "tooltip": true,

@@ -78,6 +78,7 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
+#scratchpad,
 #custom-pacupdates,
 #language {
     padding: 0 10px;
@@ -242,4 +243,12 @@ label:focus {
 #language {
     background-color: #00b093;
     color: #ffffff;
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
 }
