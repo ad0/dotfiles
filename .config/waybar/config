@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/pacupdates", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "sway/language", "clock", "tray"],
+    "modules-right": ["custom/pacupdates", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "sway/language", "battery", "clock", "tray"],
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
@@ -74,20 +74,20 @@
     //    "format": "{percent}% {icon}",
     //    "format-icons": ["", "", "", "", "", "", "", "", ""]
     //},
-    //"battery": {
-    //    "states": {
-    //        // "good": 95,
-    //        "warning": 30,
-    //        "critical": 15
-    //    },
-    //    "format": "{capacity}% {icon}",
-    //    "format-charging": "{capacity}% ",
-    //    "format-plugged": "{capacity}% ",
-    //    "format-alt": "{time} {icon}",
-    //    // "format-good": "", // An empty format will hide the module
-    //    // "format-full": "",
-    //    "format-icons": ["", "", "", "", ""]
-    //},
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
