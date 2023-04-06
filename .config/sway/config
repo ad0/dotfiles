@@ -254,6 +254,12 @@ bar {
 }
 
 #
+# Notification System:
+#
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
+#
 # Windows Decorations:
 #
 gaps inner 10
