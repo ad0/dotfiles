@@ -18,3 +18,6 @@ vim.api.nvim_create_autocmd(
   { 'BufLeave', 'FocusLost', 'InsertEnter', 'WinLeave' },
   { group = augroup, pattern = '*', command = 'if &nu | set nornu | endif' }
 )
+
+-- highlight current line
+vim.cmd('set cursorline')
