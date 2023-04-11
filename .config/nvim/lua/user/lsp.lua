@@ -1,19 +1,3 @@
--- LSP and completion
-local cmp = require('cmp')
-cmp.setup({
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end,
-  },
-  mapping = cmp.mapping.preset,
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-    { name = 'path' },
-  }),
-})
-
 local lspconfig = require('lspconfig')
 local lsp_defaults = lspconfig.util.default_config
 lsp_defaults.capabilities = vim.tbl_deep_extend(

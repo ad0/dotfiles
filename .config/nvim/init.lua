@@ -1,6 +1,7 @@
-require "user.plugins"
-require "user.core"
-require "user.ui"
-require "user.fuzzy"
-require "user.lsp"
-require "user.diagnostics"
+require 'user.plugins'
+require 'user.core'
+require 'user.ui'
+require 'user.fuzzy'
+require 'user.cmp'
+require 'user.lsp'
+require 'user.diagnostics'
