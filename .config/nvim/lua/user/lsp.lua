@@ -14,10 +14,15 @@ cmp.setup({
   }),
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
+local lsp_defaults = lspconfig.util.default_config
+lsp_defaults.capabilities = vim.tbl_deep_extend(
+  'force',
+  lsp_defaults.capabilities,
+  require('cmp_nvim_lsp').default_capabilities()
+)
+
 lspconfig['lua_ls'].setup {
-  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -35,19 +40,12 @@ lspconfig['lua_ls'].setup {
     },
   },
 }
-lspconfig['rust_analyzer'].setup {
-  capabilities = capabilities,
-}
+lspconfig['rust_analyzer'].setup {}
 lspconfig['volar'].setup {
-  capabilities = capabilities,
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
 }
-lspconfig['ocamllsp'].setup {
-  capabilities = capabilities,
-}
-lspconfig['hls'].setup {
-  capabilities = capabilities,
-}
+lspconfig['ocamllsp'].setup {}
+lspconfig['hls'].setup {}
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
