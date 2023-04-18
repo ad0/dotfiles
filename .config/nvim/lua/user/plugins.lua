@@ -52,6 +52,7 @@ packer.startup(function(use)
     requires = 'nvim-lua/plenary.nvim'
   }
 
+  use 'lukas-reineke/indent-blankline.nvim'
   use 'mbbill/undotree'
 
   use 'neovim/nvim-lspconfig'   -- collection of common configurations for builtin LSP client

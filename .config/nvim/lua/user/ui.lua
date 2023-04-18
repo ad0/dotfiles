@@ -13,3 +13,5 @@ require('tabby').setup()
 
 -- file tree
 require('neo-tree').setup()
+
+require('indent_blankline').setup()
