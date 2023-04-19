@@ -1,5 +1,6 @@
 require 'user.plugins'
 require 'user.core'
+require 'user.treesitter'
 require 'user.ui'
 require 'user.fuzzy'
 require 'user.cmp'

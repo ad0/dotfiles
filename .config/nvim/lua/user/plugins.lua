@@ -62,6 +62,8 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-vsnip'       -- snippet completion source
   use 'hrsh7th/vim-vsnip'       -- snippet framework
 
+  use 'nvim-treesitter/nvim-treesitter'
+
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
