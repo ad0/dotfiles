@@ -2,11 +2,7 @@
 vim.cmd('colorscheme nightfox')
 
 -- status bar
-require('lualine').setup {
-  options = {
-    theme = 'nightfox'
-  }
-}
+require('lualine').setup {}
 
 -- tabs and buffers
 require('tabby').setup()
